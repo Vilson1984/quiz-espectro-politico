@@ -45,67 +45,74 @@ class Questionario
         p "Ok, vamos às perguntas..."
         p "Responda com 1, 2, ou 3 conforme o enunciado"
         
-        p "1 - Qual a sua opinião sobre a intervenção do Estado na economia?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P1 ) Qual a sua opinião sobre a intervenção do Estado na economia?"
+        p "1 = Sou a favor"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou contra."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
         
    
-        p "2 - Qual a sua opinião sobre a abertura da economia para mercados internacionais?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P2 ) Qual a sua opinião sobre a abertura da economia para mercados internacionais?"
+        p "1 = Sou contra"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou a favor"
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
         
         validar_resposta(resposta, matriz)
         
 
-        p "3 - Na sua opinião o Estado deve ser Laico?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P3 ) Na sua opinião o Estado deve ser Laico?"
+        p "1 = Sou à favor"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou contra."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
         
       
 
-        p "4 - Em um ambiente de conflito o que tem prioriadade? A sociedade, ou o capital? "
-        p "DIGITE 1 para sociedade"
-        p "2 depende" 
-        p "3 capital."
+        p "P4 ) Em um ambiente de conflito o que tem prioriadade? A sociedade, ou o capital? "
+        p "1 = Sociedade"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Capital."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
         
    
         
-        p "5 - Qual a sua opinião sobre a tributação de impostos, mais substanciais, aos que possuem grande acúmulo patrimonial?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P5 ) Qual a sua opinião sobre a tributação de impostos, mais substanciais, aos que possuem grande acúmulo patrimonial?"
+        p "1 = Sou à favor"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou contra."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
         
    
 
-        p "6 - Qual a sua opinião sobre cotas raciais em faculdades públicas?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P6 ) Qual a sua opinião sobre cotas raciais em faculdades públicas?"
+        p "1 = Sou à favor"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou contra."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
         
 
-        p "7 - Qual a sua opinião sobre a entrada de imigrantes no país?" 
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P7 ) Qual a sua opinião sobre a entrada de imigrantes no país?" 
+        p "1 = Sou à favor"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou contra."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
@@ -113,30 +120,32 @@ class Questionario
   
 
 
-        p "8 - Na sua opinião qual justiça deve ser exercida no país?"
-        p " DIGITE 1 para reabilitativa"
-        p " 2 depende do caso"
-        p "3 punitiva."
+        p "P8 ) Na sua opinião qual justiça deve ser exercida no país?"
+        p "1 = Reabilitativa"
+        p "2 = Depende do caso"
+        p "3 = Punitiva."
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
    
 
 
-        p "9 - Você é a favor do crescimento de cidade e pólos industriais, em detrimento do meio-ambiente?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P9 ) Você é a favor do crescimento de cidade e pólos industriais, em detrimento do meio-ambiente?"
+        p "1 = Sou contra"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou a favor."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
         
   
 
-        p "10 - Você é a favor de políticas que objetivam uma maior equidade entre todas as classes que constituem uma sociedade?"
-        p "DIGITE 1 se é a favor"
-        p "2 neutro/não sabe"
-        p "3 contra."
+        p "P10 ) Você é a favor de políticas que objetivam uma maior equidade entre todas as classes que constituem uma sociedade?"
+        p "1 = Sou à favor"
+        p "2 = Sou neutro/ ou depende do contexto"
+        p "3 = Sou contra."
+        p "Digite o número da sua resposta:"
         resposta = gets.to_i  
 
         validar_resposta(resposta, matriz)
@@ -148,12 +157,17 @@ class Questionario
         soma_matriz = matriz.inject(:+)
         
         #DEFINIÇÃO DO SPECTRO POLÍTICO
-        if (soma_matriz <= 10)
-                puts "Seu viés político tende mais para à esquerda/progressista"
-            elsif (soma_matriz > 10) and (soma_matriz < 20 ) 
-                puts "Seu viés político tende mais ao centro"    
-            else 
-            puts "Seu viés político tende mais à direita/conservadora"
+        case soma_matriz
+        when 10
+            p "Sua visão política é mais alinhada à extrema esquerda"
+        when 11..16
+            p "Sua visão política é mais alinhada à centro-esquerda"
+        when 17..23
+            p "Sua visão política é mais alinhada ao centro"
+        when 24..29
+            p "Sua visão política é mais alinhada à centro-direita"
+        else
+            p "Sua visão política é mais alinhada à extrema-direita"
         end
 
         p "vc deseja refazer o teste?"
