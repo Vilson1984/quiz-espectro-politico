@@ -1,23 +1,16 @@
+def concatena_nome_sobrenome
+    puts "Digite seu nome:"
+    nome = gets
 
-puts "Olá seja bem vindo (a)!"
-puts " Vamos juntos descobrir qual é o seu posicionamento político-ideológico? "
+    puts "Olá "+nome+" Qual o seu sobrenome?"
+    sobrenome = gets
 
-#ENTRADA DO NOME E CALCULA A QTDE DE CARACTERES
-puts "Digite seu nome:"
-nome = gets
-letras_nome = nome.length
+    #CONCATENA NOME E SOBRENOME
+    puts "Olá #{nome} #{sobrenome}, seja bem vindo (a)!"     
+    puts " Vamos juntos descobrir qual é o seu posicionamento político-ideológico? "
+end
 
-#ENTRADA DO SOBRENOME E CALCULA A QTDE DE CARACTERES
-puts "Olá "+nome+" Qual o seu sobrenome?"
-sobrenome = gets
-letras_sobrenome = sobrenome.length
-
-#CONCATENA NOME E SOBRENOME
-puts "Olá #{nome} #{sobrenome}" 
- 
-#RETORNA QTDE CARACTERES NOMES PARA USUÁRIO
-puts "Vc sabia que o seu nome têm #{letras_nome-1} letras?"  
-puts "E o seu sobrenome têm #{letras_sobrenome-1} letras?"
+concatena_nome_sobrenome
 
 def valor_nao_aceito
     p "Esse não é um valor aceito! Digite apenas 1, 2 ou 3."
